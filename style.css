@@ -1,14 +1,13 @@
 body {
-    /* dimensions */
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    /* flex */
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* design */
+
     background-color: #fffdfa;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -41,7 +40,6 @@ footer p {
 }
 
 .display {
-    /* dimensions & etc */
     height: 80px;
     margin-bottom: 20px;
     padding-right: 12px;
@@ -49,12 +47,12 @@ footer p {
     border: 3px solid #323232;
     border-radius: 10px;
     overflow: auto;
-    /* flex */
+    
     display: flex;
     justify-content: flex-end;
     align-items: center;
     flex-wrap: wrap;
-    /* text */
+    
     text-align: right;
     font-size: 28px;
     font-family: monospace;
