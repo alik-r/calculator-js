@@ -124,6 +124,22 @@ btnBackspace.addEventListener('click', pressBackspace);
 
 // Keyboard support
 
+function displayAddNumberKeyb(key) {
+  const num = key;
+  if (divDisplay.textContent === '0') {
+    divDisplay.textContent = num;
+  } else {
+    divDisplay.textContent += num;
+  }
+}
+
+function displayAddOpKeyb(key) {
+  const op = key;
+  if (!['+', '-', '*', '/'].includes(divDisplay.textContent.at(-1))) {
+    divDisplay.textContent += op;
+  }
+}
+
 document.addEventListener('keydown', (event) => {
   const key = event.key;
   if (key === 'Enter') {
@@ -143,24 +159,4 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
-function displayAddNumberKeyb(key) {
-  const num = key;
-  if (divDisplay.textContent === '0') {
-    divDisplay.textContent = num;
-  } else {
-    divDisplay.textContent += num;
-  }
-}
 
-function displayAddOpKeyb(key) {
-  const op = key;
-  if (!['+', '-', '*', '/'].includes(divDisplay.textContent.at(-1))) {
-    divDisplay.textContent += op;
-  }
-}
-
-function pressBackspace() {
-  if (divDisplay.textContent.length > 1) {
-    divDisplay.textContent = divDisplay.textContent.slice(0, -1);
-  }
-}
